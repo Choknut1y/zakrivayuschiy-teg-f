@@ -1,1 +1,32 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --accent-color: #00cc14;
+  --page-bg-color: #000;
+  --color-bottum:#00cc14;
+  --page-bg-color-from: #007f0c;
+  --page-bg-color-to: #004306;
+  --focus-vis:#fff;
+  --thems-background: #000;
+  --text-color: #00cc14;
+  --main-font-weight-text: 400;
+  --main-font-weight-title: 700;
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #000,
+      #000 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #007f0c, #004306);
+  --main_font_family: "Inter", "Arial", sans-serif;
+  --button-text-color: #fff;
+  --blend:difference;
+  --heart-fill: #FF0000;
+}
