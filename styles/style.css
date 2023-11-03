@@ -46,7 +46,7 @@
 }
 
 .header_tittle {
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", fantasy;
   font-size: 65px;
   font-style: normal;
   font-weight: 400;
@@ -59,7 +59,7 @@
 }
 
 .header_tittle-tag {
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", fantasy;
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
@@ -87,7 +87,7 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", fantasy;
 }
 
 .theme-menu__button {
@@ -110,6 +110,11 @@
   background: var(--accent-color);
   scale: 0;
   transition: scale 300ms, 0.5s;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus-visible {
@@ -153,13 +158,25 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", fantasy;
   font-size: 14px;
   font-style: normal;
+  mix-blend-mode: hard-light;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
   opacity: 0.5;
+}
+
+@supports (
+  (text-stroke: 1px var(--color-background)) or
+    (-webkit-text-stroke: 1px var(--color-background))
+) {
+  .label {
+    -webkit-text-stroke: 1px var(--color-background);
+    text-stroke: 1px var(--color-background);
+    text-shadow: none;
+  }
 }
 
 .card {
@@ -167,7 +184,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   border: 2px solid var(--accent-color);
   background-color: var(--thems-background);
 }
@@ -180,7 +196,7 @@
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
-  font-variation-settings: "wght" var(--main-font-weight-title);
+  font-variation-settings: "wght" var();
   line-height: normal;
 }
 
@@ -271,7 +287,7 @@
 .button {
   background-color: transparent;
   border: 2px solid var(--accent-color);
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -349,7 +365,7 @@
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
-  font-weight: 465;
+  font-weight: var(--main-font-weight-descrip);
   line-height: 21px;
 }
 
@@ -365,6 +381,28 @@
   gap: 8px;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.footer_button::after {
+  position: absolute;
+
+  content: "";
+  inset: 0;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  background-color: var(--accent-color);
+}
+
+.footer_button:hover::after {
+  transform: scaleX(1);
+}
+
+.footer_button * {
+  mix-blend-mode: difference;
 }
 
 .footer_diskette {
@@ -403,7 +441,7 @@
 
 .dialog-text {
   color: var(--accent-color);
-  font-family: "Press Start 2P";
+  font-family: "Press Start 2P", fantasy;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -420,13 +458,26 @@
   color: var(--accent-color);
   z-index: 3;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.floppy_dialog {
-  background-color: transparent;
-  position: relative;
-  width: 21px;
-  height: 21px;
+.dialog_button::after {
+  position: absolute;
+
+  content: "";
+  inset: 0;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  background-color: var(--accent-color);
+}
+
+.dialog_button:hover::after {
+  transform: scaleX(1);
+}
+
+.dialog_button * {
   mix-blend-mode: difference;
 }
 
@@ -434,6 +485,10 @@
   width: 39px;
   height: 39px;
   fill: var(--accent-color);
+}
+
+.window_dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.713);
 }
 
 @media (width <= 375px) {

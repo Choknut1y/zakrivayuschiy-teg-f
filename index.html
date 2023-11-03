@@ -6,19 +6,22 @@
     <meta name="color-scheme" content="dark light" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
-    <link rel="icon" type="image/xml+svg" href="./images/favicon.svg" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/xml+svg" href="./svg/favicon.svg" />
+    <link rel="mask-icon" href="./svg/favicon.svg" />
+    <link rel="apple-touch-icon" href="./images/favicon.png" />
     <script src="./scripts/set-theme.js"></script>
   </head>
 
   <body class="page">
     <header class="header">
       <div class="header_block">
-        <p class="header_tittle"><a href="#" class="link"></a>&lt/HTML&gt</p>
+        <a class="header_tittle link">&lt/HTML&gt</a>
         <h1 class="header_tittle-tag">закрывающий тег</h1>
       </div>
       <nav class="theme-menu header__theme-menu">
@@ -50,9 +53,9 @@
 
     <main class="main">
       <article class="card">
-        <h3 class="tittle_text">
+        <h2 class="tittle_text">
           Фритрек и нулевой спринт: Подготовка к работе
-        </h3>
+        </h2>
 
         <div class="image_cont">
           <img
@@ -118,7 +121,7 @@
       </article>
 
       <article class="card">
-        <h3 class="tittle_text">1 спринт: Я — чистый лист</h3>
+        <h2 class="tittle_text">1 спринт: Я — чистый лист</h2>
 
         <div class="image_cont">
           <img
@@ -186,7 +189,7 @@
       </article>
 
       <article class="card">
-        <h3 class="tittle_text">1 спринт: А если не получится?</h3>
+        <h2 class="tittle_text">1 спринт: А если не получится?</h2>
 
         <div class="image_cont">
           <img
@@ -252,7 +255,7 @@
       </article>
 
       <article class="card">
-        <h3 class="tittle_text">2 спринт: Погоня за идеалом</h3>
+        <h2 class="tittle_text">2 спринт: Погоня за идеалом</h2>
 
         <div class="image_cont">
           <img
@@ -320,7 +323,7 @@
       </article>
 
       <article class="card">
-        <h3 class="tittle_text">2 спринт: О тех, кто рядом</h3>
+        <h2 class="tittle_text">2 спринт: О тех, кто рядом</h2>
 
         <div class="image_cont">
           <img
@@ -389,7 +392,7 @@
       </article>
 
       <article class="card">
-        <h3 class="tittle_text">3 спринт: Обходные стратегии</h3>
+        <h2 class="tittle_text">3 спринт: Обходные стратегии</h2>
 
         <div class="image_cont">
           <img
@@ -454,7 +457,7 @@
       </article>
 
       <article class="card">
-        <h3 class="tittle_text">3 спринт: Когда опускаются руки</h3>
+        <h2 class="tittle_text">3 спринт: Когда опускаются руки</h2>
 
         <div class="image_cont">
           <img
@@ -522,7 +525,7 @@
       </article>
 
       <article class="card">
-        <h3 class="tittle_text">«Сейчас я здесь»</h3>
+        <h2 class="tittle_text">«Сейчас я здесь»</h2>
 
         <div class="image_cont">
           <img
@@ -590,18 +593,18 @@
 
       <div class="footer">
         <button
-          class="footer_button button"
+          class="footer_button button decorationButton"
           type="button"
           onclick="window['dialog-id'].showModal()"
           aria-controls="dialog-id"
         >
+        <span class="button__text">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 21 21"
             class="footer_diskette"
             fill="none"
           >
-            <rect width="1.61538" height="1.61538" />
             <rect y="1.61523" width="1.61538" height="1.61538" />
             <rect y="3.23096" width="1.61538" height="1.61538" />
             <rect y="4.84619" width="1.61538" height="1.61538" />
@@ -1074,12 +1077,12 @@
               transform="rotate(-180 21 4.84619)"
             />
           </svg>
-          <span button__text>Сохранить на память</span>
+          Сохранить на память</span>
         </button>
 
-        <dialog id="dialog-id" class="footer_dialog">
+        <dialog id="dialog-id" class="footer_dialog window_dialog">
           <div class="dialog__container">
-            <form>
+            <form method="dialog">
               <div class="dialog__content">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1099,7 +1102,7 @@
                 type="button"
                 onclick="window['dialog-id'].close()"
               >
-                Ок
+              <span class="button__text">Ок</span>
               </button>
             </form>
           </div>

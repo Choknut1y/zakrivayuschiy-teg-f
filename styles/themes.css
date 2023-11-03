@@ -11,8 +11,10 @@
   --page-bg-color-from: #007f0c;
   --page-bg-color-to: #004306;
   --thems-background: #000;
-  --focus-vis:#fff;
-  --color-bottum:#00cc14;
+  --focus-vis: #fff;
+  --color-bottum: #00cc14;
+  --main-font-weight-title:785;
+  --main-font-weight-descrip:465;
   --text-color: #00cc14;
   --background-gradient: repeating-linear-gradient(
       to right,
@@ -34,7 +36,9 @@
 
 :root.theme-light {
   --page-bg-color: #fff;
-  --color-bottum:#fff;
+  --main-font-weight-title:700;
+  --main-font-weight-descrip:400;
+  --color-bottum: #fff;
   --background-gradient: repeating-linear-gradient(
       to right,
       #d3d3d3,
@@ -53,6 +57,37 @@
   --text-color: #000;
   --accent-color: #000;
   --thems-background: #fff;
-  --blend:normal;
-  --focus-vis:#000;
+  --blend: normal;
+  --focus-vis: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #00cc14;
+    --page-bg-color: #000;
+    --page-bg-color-from: #007f0c;
+    --page-bg-color-to: #004306;
+    --main-font-weight-descrip:465;
+    --thems-background: #000;
+    --focus-vis: #fff;
+    --color-bottum: #00cc14;
+    --text-color: #00cc14;
+    --main-font-weight-title:785;
+    --background-gradient: repeating-linear-gradient(
+        to right,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        #000,
+        #000 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(to bottom, #007f0c, #004306);
+    --main_font_family: "Inter", "Arial", sans-serif;
+  }
 }

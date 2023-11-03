@@ -2,10 +2,10 @@
 :root {
   --accent-color: #00cc14;
   --page-bg-color: #000;
-  --color-bottum:#00cc14;
+  --color-bottum: #00cc14;
   --page-bg-color-from: #007f0c;
   --page-bg-color-to: #004306;
-  --focus-vis:#fff;
+  --focus-vis: #fff;
   --thems-background: #000;
   --text-color: #00cc14;
   --main-font-weight-text: 400;
@@ -27,6 +27,6 @@
     linear-gradient(to bottom, #007f0c, #004306);
   --main_font_family: "Inter", "Arial", sans-serif;
   --button-text-color: #fff;
-  --blend:difference;
-  --heart-fill: #FF0000;
+  --blend: difference;
+  --heart-fill: #ff0000;
 }
