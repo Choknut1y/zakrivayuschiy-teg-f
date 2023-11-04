@@ -196,7 +196,7 @@
   font-family: Inter;
   font-size: 18px;
   font-style: normal;
-  font-variation-settings: "wght" var();
+  font-variation-settings: "wght" var(--main-font-weight-title);
   line-height: normal;
 }
 
@@ -382,7 +382,6 @@
   align-items: center;
   cursor: pointer;
   position: relative;
-  z-index: 3;
 }
 
 .footer_button::after {
@@ -401,12 +400,8 @@
   transform: scaleX(1);
 }
 
-.footer_button * {
-  mix-blend-mode: difference;
-}
-
 .footer_diskette {
-  fill: var(--accent-color);
+  fill: var(--color-bottum);
   width: 21px;
   height: 21px;
 }
@@ -435,8 +430,8 @@
 
 .dialog__container {
   display: flex;
-  gap: 20px;
   align-items: center;
+  flex-direction: column;
 }
 
 .dialog-text {
@@ -456,7 +451,6 @@
   height: 38px;
   position: relative;
   color: var(--accent-color);
-  z-index: 3;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -515,6 +509,13 @@
 
   .footer_button {
     flex-direction: column;
+  }
+
+  .button__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
   .footer_diskette {
